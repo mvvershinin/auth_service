@@ -14,6 +14,7 @@ func TestCreateAndVerifyToken(t *testing.T) {
 	user := models.User{
 		Login:    "testuser",
 		Password: "testpassword",
+		Id:       123,
 		// Add other user details if needed
 	}
 
