@@ -61,7 +61,7 @@ func CreateToken(user models.User) (string, error) {
 	token := jwt.New(jwt.SigningMethodHS256)
 	claims := token.Claims.(jwt.MapClaims)
 	claims["login"] = user.Login
-	claims["userId"] = 55734
+	claims["userId"] = user.Id
 	//todo role
 	claims["exp"] = time.Now().Add(time.Hour * 24).Unix() // Token expires in 24 hours
 

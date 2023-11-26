@@ -38,7 +38,11 @@ func Login(c *gin.Context) {
 	//	return
 	//}
 
-	user := models.User{Login: "login_string", Password: "password_string"}
+	user := models.User{
+		Login:    "login_string",
+		Password: "password_string",
+		Id:       434667,
+	}
 
 	token, err := utils.CreateToken(user)
 	if err != nil {
